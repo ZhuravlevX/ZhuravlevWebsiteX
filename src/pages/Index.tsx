@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { ImageViewer } from "@/components/ImageViewer";
@@ -8,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import { useToast } from "@/hooks/use-toast";
 import { Github, Clock, Circle, Link2 } from "lucide-react";
 import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 const octokit = new Octokit();
 const GITHUB_USERNAME = "ZhuravlevX";
@@ -455,7 +457,10 @@ const Index = () => {
       <main className="container mx-auto px-4 pt-24 pb-12 flex-grow">
         {renderSection()}
       </main>
-      <footer className="w-full bg-[#0D0D0D]/80 py-4 border-t border-white/10">
+      <footer className={cn(
+        "w-full bg-[#0D0D0D]/80 py-4 border-t border-white/10 transition-all duration-700",
+        "opacity-0 animate-fade-in"
+      )} style={{animationFillMode: 'forwards'}}>
         <div className="container mx-auto px-4">
           <p className="text-center text-white/60 text-sm">
             {t("footer.text")}

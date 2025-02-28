@@ -14,7 +14,7 @@ const resources = {
       about: {
         title: "About Me",
         description: "Programmer & Indie Developer",
-        bio: "My nickname is ZhuravlevX, and I'm a member of the furry fandom. As a member of the fandom, I have a fursona named Danny Lisitsky.\n\nI live in Russia, in the capital city of Moscow. I'm building and planning my future career, which I will be gradually ascending to over the years. I'm studying programming, including Python, C#, and other programming languages... I have many favorite games, which you can find in my Steam profile. My birthday is April 13th. I'm open to meeting new people and communication.",
+        bio: "My nickname is ZhuravlevX, and I'm a member of the furry fandom. As a member of the fandom, I have a fursona named Danny Lisitsky.\n\nI live in Russia, in the city of Moscow. Among my hobbies are programming and photography. The programming languages I currently know and study are C# and Python. In the future, I'd like to learn to play a musical instrument, such as guitar, and also purchase a camera for beautiful photographs. Overall, I'm open to communication and meeting new people.",
         minecraftSkin: "Current Minecraft Skin",
         fursonaRef: "My fursona reference",
         birthday: {
@@ -66,7 +66,7 @@ const resources = {
       about: {
         title: "Обо мне",
         description: "Программист & Инди-Разработчик",
-        bio: "Мой псевдоним − ZhuravlevX, являюсь представителем субкультуры фурри. Как представитель субкультуры у меня имеется фурсона которого звать Дэнни Лисицкий.\n\nПроживаю в России в столице Москва. Строю и планирую свою будущую карьеру к которой я буду подниматься постепенно спустя долгие годы. Изучаю программирование, среди них языки Python, CSharp и другие языки программирования... Много любимых игр, которые можно узнать у меня в профиле Steam. День рождение у меня 13 апреля. Не против новых знакомств и общений.",
+        bio: "Мой псевдоним − ZhuravlevX, являюсь представителем субкультуры фурри. Как представитель субкультуры у меня имеется фурсона которого звать Дэнни Лисицкий.\n\nПроживаю в России в городе Москва. Среди хобби имеется программирование и фотографирование чего-либо. Языки программирования которые я знаю и изучаю на текущий момент, это C# и Python. В будущем хочу научиться играть на музыкальном инструменте, например гитара, а такде приобрести фотоаппарат для красивых фотографий. В целом я не против общения и новых знакомств.",
         minecraftSkin: "Текущий скин в Minecraft",
         fursonaRef: "Референс моей фурсоны",
         birthday: {
