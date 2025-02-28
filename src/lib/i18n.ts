@@ -1,4 +1,3 @@
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -49,6 +48,10 @@ const resources = {
         discord: "Discord",
         steam: "Steam",
         vk: "VK",
+      },
+      notFound: {
+        message: "Page not found",
+        returnHome: "Return to home page"
       },
       footer: {
         text: "This site was created with AI in collaboration with ZhuravlevX. You can ask me any questions personally. Everything on this site, including the domain, is the property of ZhuravlevX."
@@ -101,6 +104,10 @@ const resources = {
         discord: "Discord",
         steam: "Steam",
         vk: "ВКонтакте",
+      },
+      notFound: {
+        message: "Страница не найдена",
+        returnHome: "Вернуться на главную"
       },
       footer: {
         text: "Данный сайт сделан при помощи ИИ совместно с ZhuravlevX. Все вопросы можете лично задать мне. Все что находиться на данном сайте, в том числе и домен – собственность ZhuravlevX."
