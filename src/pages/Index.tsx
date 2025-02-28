@@ -434,7 +434,7 @@ const Index = () => {
                 </svg>
                 {t("social.steam")}
               </a>
-              <a href="https://open.spotify.com/user/31dgwdgrkyfvvahwrjyx5yjdspey?si=87317b59bc7c4dbb" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] transition-all duration-300 rounded-md text-black transform hover:scale-105 opacity-0 animate-fade-in" style={{
+              <a href="https://open.spotify.com/user/31dgwdgrkyfvvahwrjyx5yjdspey?si=87317b59bc7c4dbb" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] transition-all duration-300 rounded-md text-white transform hover:scale-105 opacity-0 animate-fade-in" style={{
               animationDelay: '500ms',
               animationFillMode: 'forwards'
             }}>
