@@ -440,14 +440,6 @@ const Index = () => {
                     className="w-full object-cover rounded-lg transition-all duration-700 group-hover:scale-110 filter hover:brightness-110"
                     loading="lazy"
                   />
-                  
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-white text-sm">
-                        {selectedCategory === "artwork" ? t("art.viewArtwork") : t("art.viewPhoto")}
-                      </p>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
