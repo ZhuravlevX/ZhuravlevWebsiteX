@@ -109,7 +109,6 @@ const Index = () => {
   } = useToast();
 
   useEffect(() => {
-    // Trigger main animation after a small delay
     const timer = setTimeout(() => {
       setAnimationTriggered(true);
     }, 500);
@@ -238,7 +237,8 @@ const Index = () => {
               "bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm",
               "hover:bg-white/10 transition-all duration-500",
               "transform hover:scale-105 hover:shadow-lg hover:shadow-purple/10",
-              "opacity-0 animate-[slideInUp_0.6s_ease-out_forwards]"
+              "opacity-0 animate-[slideInUp_0.6s_ease-out_forwards]",
+              "flex flex-col h-full"
             )}
             style={{ animationDelay: `${index * 100}ms` }}
             onClick={() => {
@@ -251,29 +251,34 @@ const Index = () => {
               }
             }}
           >
-            <a 
-              href={repo.html_url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="block hover:text-purple-light transition-colors"
-              onClick={e => {
-                if (repo.name === "FurTopia") {
-                  e.preventDefault();
-                }
-              }}
-            >
-              <h3 className="font-semibold text-white mb-2">{repo.name}</h3>
-              <p className="text-white/60 text-sm mb-2">{repo.description}</p>
-            </a>
-            
-            {repo.language && (
-              <div className="flex items-center gap-2 mb-3">
-                <Circle size={8} className="text-purple-light animate-pulse" />
-                <span className="text-sm text-white/60">{repo.language}</span>
+            <div className="flex-grow">
+              <div className="flex items-center justify-between mb-2">
+                <a 
+                  href={repo.html_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-purple-light transition-colors"
+                  onClick={e => {
+                    if (repo.name === "FurTopia") {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <h3 className="font-semibold text-white">{repo.name}</h3>
+                </a>
+                
+                {repo.language && (
+                  <div className="flex items-center gap-2">
+                    <Circle size={8} className="text-purple-light animate-pulse" />
+                    <span className="text-sm text-white/60">{repo.language}</span>
+                  </div>
+                )}
               </div>
-            )}
+              
+              <p className="text-white/60 text-sm mb-4">{repo.description}</p>
+            </div>
             
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mt-4 pt-2 border-t border-white/10">
               {!repo.name.includes("FurTopia") && (
                 <button 
                   onClick={(e) => {
@@ -336,7 +341,7 @@ const Index = () => {
                 "before:blur-md"
               )}>
                 <img 
-                  src="/gallery/arts/98832de4-7399-438e-8f82-9625067892d8.png"
+                  src="/gallery/arts/98832de4-7399-438e-8f82-9625067892d8.png" 
                   alt="Profile Avatar" 
                   className="w-full h-full object-cover rounded-full border-2 border-purple relative z-10 animate-[float_6s_ease-in-out_infinite]" 
                 />
@@ -366,7 +371,7 @@ const Index = () => {
                   
                   <div className="opacity-0 animate-[fadeInUp_0.8s_ease-out_1.1s_forwards]">
                     <img 
-                      src="/gallery/arts/43cef4b8-3c64-4f7b-a42f-5784dc8c3338.png"
+                      src="/gallery/arts/43cef4b8-3c64-4f7b-a42f-5784dc8c3338.png" 
                       alt="Danny Lisitsky Fursona" 
                       className="mx-auto max-w-full h-auto rounded-lg border-2 border-purple my-4 transform hover:scale-105 transition-all duration-500 shadow-lg shadow-purple/20 w-3/4 hover:shadow-xl hover:shadow-purple/30" 
                     />
