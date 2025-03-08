@@ -13,8 +13,7 @@ const resources = {
       about: {
         title: "About Me",
         description: "Programmer & Indie Developer",
-        bio: "My nickname is ZhuravlevX, and I'm a member of the furry fandom. As a member of the fandom, I have a fursona named Danny Lisitsky.\n\nI live in Russia, in the city of Moscow. Among my hobbies are programming and photography. The programming languages I currently know and study are C# and Python. In the future, I'd like to learn to play a musical instrument, such as guitar, and also purchase a camera for beautiful photographs. Overall, I'm open to communication and meeting new people.",
-        minecraftSkin: "Current Minecraft Skin",
+        bio: "My nickname - ZhuravlevX, I am a representative of the subculture of furry. As a representative of the subculture I have a furson whose name is Danny Lisitsky.\n\nI live in Russia in the city of Moscow. Among hobbies there is programming and photographing something. Programming languages that I know and study at the moment are C# and Python. In the future I want to learn to play a musical instrument, such as guitar, as well as to buy a camera for beautiful photos. In general I am not against socializing and new acquaintances.",
         fursonaRef: "My fursona reference",
         birthday: {
           today: "Happy birthday! 🎉",
@@ -38,7 +37,7 @@ const resources = {
       art: {
         title: "Gallery",
         categories: {
-          artwork: "Artwork",
+          artwork: "Arts",
           photos: "Photos"
         }
       },
@@ -54,7 +53,7 @@ const resources = {
         returnHome: "Return to home page"
       },
       footer: {
-        text: "This site was created with AI in collaboration with ZhuravlevX. You can ask me any questions personally. Everything on this site, including the domain, is the property of ZhuravlevX."
+        text: "This site is made with the help of AI together with ZhuravlevX. All questions can personally ask me. Everything on this site, including the domain is the property of ZhuravlevX."
       }
     },
   },
@@ -69,8 +68,7 @@ const resources = {
       about: {
         title: "Обо мне",
         description: "Программист & Инди-Разработчик",
-        bio: "Мой псевдоним − ZhuravlevX, являюсь представителем субкультуры фурри. Как представитель субкультуры у меня имеется фурсона которого звать Дэнни Лисицкий.\n\nПроживаю в России в городе Москва. Среди хобби имеется программирование и фотографирование чего-либо. Языки программирования которые я знаю и изучаю на текущий момент, это C# и Python. В будущем хочу научиться играть на музыкальном инструменте, например гитара, а такде приобрести фотоаппарат для красивых фотографий. В целом я не против общения и новых знакомств.",
-        minecraftSkin: "Текущий скин в Minecraft",
+        bio: "Мой псевдоним − ZhuravlevX, являюсь представителем субкультуры фурри. Как представитель субкультуры у меня имеется фурсона которого звать Дэнни Лисицкий.\n\nПроживаю в России в городе Москва. Среди хобби имеется программирование и фотографирование чего-либо. Языки программирования которые я знаю и изучаю на текущий момент, это C# и Python. В будущем хочу научиться играть на музыкальном инструменте, например гитара, а также приобрести фотоаппарат для красивых фотографий. В целом я не против общения и новых знакомств.",
         fursonaRef: "Референс моей фурсоны",
         birthday: {
           today: "С днём рождения! 🎉",
@@ -110,7 +108,7 @@ const resources = {
         returnHome: "Вернуться на главную"
       },
       footer: {
-        text: "Данный сайт сделан при помощи ИИ совместно с ZhuravlevX. Все вопросы можете лично задать мне. Все что находиться на данном сайте, в том числе и домен – собственность ZhuravlevX."
+        text: "Данный сайт сделан при помощи ИИ совместно с ZhuravlevX. Все вопросы можете лично задать мне. Все что находится на данном сайте, в том числе и домен – собственность ZhuravlevX."
       }
     },
   },
