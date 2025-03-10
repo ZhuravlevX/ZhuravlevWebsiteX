@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { fetchUserData, fetchRepositories, fetchReadme, fetchCommits } from "@/utils/githubUtils";
 import { calculateDaysUntilBirthday, formatDate } from "@/utils/dateUtils";
 import { type Repository, type Commit } from "@/utils/githubUtils";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -178,6 +179,8 @@ const Index = () => {
           ))}
         </div>
       </Modal>
+      
+      <Toaster />
     </div>
   );
 };

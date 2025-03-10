@@ -1,8 +1,10 @@
-
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { artImages, photoImages } from "@/data/galleryData";
+import { AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 interface GallerySectionProps {
   onImageSelect: (image: string) => void;
@@ -11,7 +13,23 @@ interface GallerySectionProps {
 export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<"artwork" | "photos">("photos");
+  const [showGallery, setShowGallery] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
+
+  // Load gallery state from localStorage on mount
+  useEffect(() => {
+    const galleryLoaded = localStorage.getItem('galleryLoaded');
+    if (galleryLoaded === 'true') {
+      setShowGallery(true);
+    }
+  }, []);
+
+  const handleLoadImages = () => {
+    setShowGallery(true);
+    // Store gallery loaded state in localStorage
+    localStorage.setItem('galleryLoaded', 'true');
+  };
 
   return (
     <div ref={sectionRef} className="flex flex-col items-center">
@@ -19,7 +37,8 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
         {t("art.title")}
       </h2>
       
-      <div className="flex gap-4 mb-8 opacity-0 animate-[fadeInDown_0.5s_ease-out_0.2s_forwards]">
+      {/* Always show category buttons */}
+      <div className="flex gap-4 mb-8 animate-fadeIn">
         <button
           onClick={() => setSelectedCategory("photos")}
           className={cn(
@@ -45,35 +64,53 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
         </button>
       </div>
       
-      <div 
-        key={selectedCategory} 
-        className="columns-1 sm:columns-2 lg:columns-3 gap-3 max-w-6xl"
-      >
-        {(selectedCategory === "artwork" ? artImages : photoImages).map((image, index) => (
-          <div
-            key={`${selectedCategory}-${index}`}
-            onClick={() => onImageSelect(image)}
-            className={cn(
-              "cursor-pointer mb-3 break-inside-avoid opacity-0",
-              "relative group overflow-hidden rounded-lg"
-            )}
-            style={{
-              animationName: "fadeInScale",
-              animationDuration: "0.7s",
-              animationTimingFunction: "ease-out",
-              animationDelay: `${index * 100}ms`,
-              animationFillMode: "forwards"
-            }}
-          >
-            <img
-              src={image}
-              alt={`${selectedCategory === "artwork" ? "Art" : "Photo"} ${index + 1}`}
-              className="w-full object-cover rounded-lg transition-all duration-700 group-hover:scale-110 filter hover:brightness-110"
-              loading="lazy"
-            />
+      {!showGallery ? (
+        <div className="max-w-xl bg-purple-light/10 border border-purple-light/20 rounded-lg p-6 animate-fadeIn">
+          <div className="flex items-center gap-3 mb-4 text-yellow-400">
+            <AlertTriangle className="h-6 w-6" />
+            <h3 className="font-semibold text-lg">{t("art.warning.title")}</h3>
           </div>
-        ))}
-      </div>
+          <p className="text-white/80 mb-6">
+            {t("art.warning.message")}
+          </p>
+          <Button 
+            onClick={handleLoadImages}
+            className="w-full bg-gradient-to-r from-purple to-purple-light hover:opacity-90 transition-opacity"
+          >
+            {t("art.warning.loadButton")}
+          </Button>
+        </div>
+      ) : (
+        <div 
+          key={selectedCategory} 
+          className="columns-1 sm:columns-2 lg:columns-3 gap-3 max-w-6xl"
+        >
+          {(selectedCategory === "artwork" ? artImages : photoImages).map((image, index) => (
+            <div
+              key={`${selectedCategory}-${index}`}
+              onClick={() => onImageSelect(image)}
+              className={cn(
+                "cursor-pointer mb-3 break-inside-avoid opacity-0",
+                "relative group overflow-hidden rounded-lg"
+              )}
+              style={{
+                animationName: "fadeInScale",
+                animationDuration: "0.7s",
+                animationTimingFunction: "ease-out",
+                animationDelay: `${index * 100}ms`,
+                animationFillMode: "forwards"
+              }}
+            >
+              <img
+                src={image}
+                alt={`${selectedCategory === "artwork" ? "Art" : "Photo"} ${index + 1}`}
+                className="w-full object-cover rounded-lg transition-all duration-700 group-hover:scale-110 filter hover:brightness-110"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

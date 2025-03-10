@@ -39,7 +39,12 @@ const resources = {
         categories: {
           artwork: "Arts",
           photos: "Photos"
-        }
+        },
+        warning: {
+          title: "Traffic warning",
+          message: "The following tab downloads images in high quality. This may result in high consumption of Internet traffic. It is recommended to enable the browser cache in the settings, for fast loading of images.",
+          loadButton: "Confirm"
+        },
       },
       social: {
         title: "Contacts",
@@ -94,7 +99,12 @@ const resources = {
         categories: {
           artwork: "Арты",
           photos: "Фотографии"
-        }
+        },
+        warning: {
+          title: "Предупреждение о расходе трафика",
+          message: "Следующая вкладка загружает изображения в высоком качестве. Это может привести к большому расходу интернет-трафика. Рекомендуется включить в настройках кэш-браузера, для быстрой загрузки изображений.",
+          loadButton: "Подтвердить"
+        },
       },
       social: {
         title: "Контакты",

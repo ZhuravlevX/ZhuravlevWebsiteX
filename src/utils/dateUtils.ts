@@ -19,3 +19,7 @@ export const calculateDaysUntilBirthday = () => {
   
   return daysDiff;
 };
+
+export const clearGalleryLoadedState = () => {
+  localStorage.removeItem('galleryLoaded');
+};
