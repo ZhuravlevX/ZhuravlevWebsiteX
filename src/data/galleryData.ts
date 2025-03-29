@@ -17,12 +17,11 @@ export const artImages = [
   "/gallery/arts/art15.png",
   "/gallery/arts/art16.png",
   "/gallery/arts/art17.png",
-  "/gallery/arts/art18.png",
+  // "/gallery/arts/art18.png", Reference
   "/gallery/arts/art19.png",
   "/gallery/arts/art20.png",
   "/gallery/arts/art21.png",
-  "/gallery/arts/art22.png",
-  "/gallery/arts/art23.png"
+  "/gallery/arts/art22.png"
 ];
 
 export const photoImages = [
@@ -52,6 +51,5 @@ export const photoImages = [
   "/gallery/pictures/picture24.png",
   "/gallery/pictures/picture25.png",
   "/gallery/pictures/picture26.png",
-  "/gallery/pictures/picture27.png",
-  "/gallery/pictures/picture28.png"
+  "/gallery/pictures/picture27.png"
 ];

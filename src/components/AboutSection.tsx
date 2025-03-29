@@ -27,7 +27,7 @@ export const AboutSection = ({ daysUntilBirthday }: AboutSectionProps) => {
           "before:blur-md"
         )}>
           <img 
-            src="/gallery/arts/98832de4-7399-438e-8f82-9625067892d8.png" 
+            src="/gallery/arts/art10.png"
             alt="Profile Avatar" 
             className="w-full h-full object-cover rounded-full border-2 border-purple relative z-10 animate-[float_6s_ease-in-out_infinite]" 
           />
@@ -57,7 +57,7 @@ export const AboutSection = ({ daysUntilBirthday }: AboutSectionProps) => {
             
             <div className="opacity-0 animate-[fadeInUp_0.8s_ease-out_1.1s_forwards]">
               <img 
-                src="/gallery/arts/43cef4b8-3c64-4f7b-a42f-5784dc8c3338.png" 
+                src="/gallery/arts/art18.png"
                 alt="Danny Lisitsky Fursona" 
                 className="mx-auto max-w-full h-auto rounded-lg border-2 border-purple my-4 transform hover:scale-105 transition-all duration-500 shadow-lg shadow-purple/20 w-3/4 hover:shadow-xl hover:shadow-purple/30" 
               />
