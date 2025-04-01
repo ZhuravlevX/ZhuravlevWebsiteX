@@ -16,7 +16,7 @@ const resources = {
         bio: "My nickname - ZhuravlevX, I am a representative of the subculture of furry. As a representative of the subculture I have a furson whose name is Danny Lisitsky.\n\nI live in Russia in the city of Moscow. Among hobbies there is programming and photographing something. Programming languages that I know and study at the moment are C# and Python. In the future I want to learn to play a musical instrument, such as guitar, as well as to buy a camera for beautiful photos. In general I am not against socializing and new acquaintances.",
         fursonaRef: "My fursona reference",
         birthday: {
-          today: "Happy birthday! 🎉",
+          today: "It's already a birthday today! Yay!",
           daysLeft: "Days until birthday: {{days}}",
           day: "day",
           days: "days"
@@ -76,7 +76,7 @@ const resources = {
         bio: "Мой псевдоним − ZhuravlevX, являюсь представителем субкультуры фурри. Как представитель субкультуры у меня имеется фурсона которого звать Дэнни Лисицкий.\n\nПроживаю в России в городе Москва. Среди хобби имеется программирование и фотографирование чего-либо. Языки программирования которые я знаю и изучаю на текущий момент, это C# и Python. В будущем хочу научиться играть на музыкальном инструменте, например гитара, а также приобрести фотоаппарат для красивых фотографий. В целом я не против общения и новых знакомств.",
         fursonaRef: "Референс моей фурсоны",
         birthday: {
-          today: "С днём рождения! 🎉",
+          today: "Уже сегодня день рождение! Ура!",
           daysLeft: "До дня рождения осталось: {{days}}",
           day: "день",
           days: "дней"

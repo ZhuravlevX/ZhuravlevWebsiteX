@@ -1,9 +1,9 @@
-
 import { useTranslation } from "react-i18next";
 import { Circle, Clock, Link2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { type Repository } from "@/utils/githubUtils";
 import { useToast } from "@/hooks/use-toast";
+import {isBirthday} from "@/utils/dateUtils.ts";
 
 interface ProjectCardProps {
   repo: Repository;
@@ -21,7 +21,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
       toast({
         description: t("projects.noContentYet"),
         duration: 3000,
-        className: "bg-[#1A1F2C] border-[#221F26] text-purple-light"
+        className: `${isBirthday() ? 'bg-[#2c1a21] border-[#221F26] text-pink-200' : 'bg-[#1A1F2C] border-[#221F26] text-purple-light'}`
       });
     }
   };
@@ -33,7 +33,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
         "p-4 rounded-lg border border-white/10",
         "bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm",
         "hover:bg-white/10 transition-all duration-500",
-        "transform hover:scale-105 hover:shadow-lg hover:shadow-purple/10",
+        `transform hover:scale-105 hover:shadow-lg ${isBirthday() ? 'hover:shadow-[#2c1a21]/10' : 'hover:shadow-purple/10'}`,
         "opacity-0 animate-[slideInUp_0.6s_ease-out_forwards]",
         "flex flex-col h-full"
       )}
@@ -46,7 +46,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
             href={repo.html_url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="hover:text-purple-light transition-colors"
+            className={`${isBirthday() ?  'hover:text-pink-200' : 'hover:text-purple-light'} transition-colors`}
             onClick={e => {
               if (isFurTopia) {
                 e.preventDefault();
@@ -55,12 +55,12 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
           >
             <h3 className="font-semibold text-white">{repo.name}</h3>
           </a>
-          
+
           {repo.language && (
-            <div className="flex items-center gap-2">
-              <Circle size={8} className="text-purple-light animate-pulse" />
-              <span className="text-sm text-white/60">{repo.language}</span>
-            </div>
+              <div className="flex items-center gap-2">
+                <Circle size={8} className={`${isBirthday() ? 'text-pink-200' : 'text-purple-light'}`} />
+                <span className="text-sm text-white/60">{repo.language}</span>
+              </div>
           )}
         </div>
         
@@ -73,13 +73,13 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
             onClick={(e) => {
               e.stopPropagation();
               onFetchCommits(repo.name);
-            }} 
-            className="text-sm text-purple hover:text-purple-light transition-colors flex items-center gap-1 relative overflow-hidden group"
+            }}
+            className={`text-sm ${isBirthday() ? 'text-pink-400 hover:text-pink-200' : 'text-purple hover:text-purple-light'} transition-colors flex items-center gap-1 relative overflow-hidden group`}
           >
             <Clock size={14} className="group-hover:animate-bounce" />
             <span className="relative">
               {t("projects.commits")}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-purple-light group-hover:w-full transition-all duration-300"></span>
+              <span className={`absolute -bottom-1 left-0 w-0 h-px ${isBirthday() ? 'bg-pink-200' : 'bg-purple-light'} group-hover:w-full transition-all duration-300`}></span>
             </span>
           </button>
         )}
@@ -89,19 +89,19 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
             href={repo.homepage} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-sm text-purple hover:text-purple-light transition-colors flex items-center gap-1 relative overflow-hidden group"
+            className={`text-sm ${isBirthday() ? 'text-pink-400 hover:text-pink-200' : 'text-purple hover:text-purple-light'} transition-colors flex items-center gap-1 relative overflow-hidden group`}
           >
             <Link2 size={14} className="group-hover:rotate-12 transition-transform" />
             <span className="relative">
               {t("projects.link")}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-purple-light group-hover:w-full transition-all duration-300"></span>
+              <span className={`absolute -bottom-1 left-0 w-0 h-px ${isBirthday() ? 'bg-pink-200' : 'bg-purple-light'} group-hover:w-full transition-all duration-300`}></span>
             </span>
           </a>
         )}
       </div>
       
       {isFurTopia && (
-        <p className="text-purple-light text-sm mt-2 animate-pulse">
+        <p className={`${isBirthday() ? 'text-pink-200' : 'text-purple-light'} text-sm mt-2`}>
           {t("projects.comingSoon")}
         </p>
       )}

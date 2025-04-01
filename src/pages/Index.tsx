@@ -9,10 +9,9 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import { SocialSection } from "@/components/SocialSection";
 import { useTranslation } from "react-i18next";
 import ReactMarkdown from 'react-markdown';
-import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { fetchUserData, fetchRepositories, fetchReadme, fetchCommits } from "@/utils/githubUtils";
-import { calculateDaysUntilBirthday, formatDate } from "@/utils/dateUtils";
+import { calculateDaysUntilBirthday, formatDate, isBirthday } from "@/utils/dateUtils";
 import { type Repository, type Commit } from "@/utils/githubUtils";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -111,10 +110,10 @@ const Index = () => {
   };
 
   return (
-    <div className={cn(
-      "min-h-screen bg-purple-dark text-white overflow-x-hidden flex flex-col relative",
-      animationTriggered ? "animate-[fadeIn_1s_ease-out]" : "opacity-0"
-    )}>
+      <div className={cn(
+          `min-h-screen ${isBirthday() ? 'bg-[#2c1a21]' : 'bg-purple-dark'} text-white overflow-x-hidden flex flex-col relative`,
+        animationTriggered ? "animate-[fadeIn_1s_ease-out]" : "opacity-0"
+        )}>
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
       
       <main className="container mx-auto px-4 pt-24 pb-12 flex-grow relative">
@@ -167,7 +166,7 @@ const Index = () => {
                 animationFillMode: "backwards" 
               }}
             >
-              <a href={commit.html_url} target="_blank" rel="noopener noreferrer" className="block hover:text-purple-light transition-colors">
+              <a href={commit.html_url} target="_blank" rel="noopener noreferrer" className={`block ${isBirthday() ? 'hover:text-pink-200' : 'hover:text-purple-light'}`}>
                 <p className="text-sm text-white/80 mb-1">{commit.commit.message}</p>
                 <div className="flex items-center gap-2 text-xs text-white/60">
                   <span>{commit.commit.author.name}</span>

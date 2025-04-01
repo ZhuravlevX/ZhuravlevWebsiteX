@@ -5,6 +5,7 @@ import { artImages, photoImages } from "@/data/galleryData";
 import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import {isBirthday} from "@/utils/dateUtils.ts";
 
 interface GallerySectionProps {
   onImageSelect: (image: string) => void;
@@ -33,7 +34,7 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
 
   return (
     <div ref={sectionRef} className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-light via-purple to-purple-light bg-clip-text text-transparent bg-[length:300%] animate-[gradientFlow_3s_ease_infinite]">
+      <h2 className={`text-3xl font-bold mb-6 bg-gradient-to-r ${isBirthday() ? 'from-pink-300 via-pink-400 to-pink-200' : 'from-purple-light via-purple to-purple-light'} bg-clip-text text-transparent bg-[length:300%] animate-[gradientFlow_3s_ease_infinite]`}>
         {t("art.title")}
       </h2>
       
@@ -44,21 +45,21 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
           className={cn(
             "px-4 py-2 rounded-md transition-all duration-500 transform active:scale-95",
             selectedCategory === "photos"
-              ? "bg-gradient-to-r from-purple to-purple-light text-white shadow-lg shadow-purple/20"
+                ? `bg-gradient-to-r ${isBirthday() ? 'from-pink-400 to-pink-200' : 'from-purple to-purple-light'} text-white shadow-lg shadow-purple/20`
               : "bg-white/5 hover:bg-white/10 text-white/80 hover:shadow-md hover:shadow-purple/10"
           )}
         >
           {t("art.categories.photos")}
         </button>
-        
+
         <button
-          onClick={() => setSelectedCategory("artwork")}
-          className={cn(
-            "px-4 py-2 rounded-md transition-all duration-500 transform active:scale-95",
-            selectedCategory === "artwork"
-              ? "bg-gradient-to-r from-purple to-purple-light text-white shadow-lg shadow-purple/20"
-              : "bg-white/5 hover:bg-white/10 text-white/80 hover:shadow-md hover:shadow-purple/10"
-          )}
+            onClick={() => setSelectedCategory("artwork")}
+            className={cn(
+                "px-4 py-2 rounded-md transition-all duration-500 transform active:scale-95",
+                selectedCategory === "artwork"
+                    ? `bg-gradient-to-r ${isBirthday() ? 'from-pink-400 to-pink-200' : 'from-purple to-purple-light'} text-white shadow-lg shadow-purple/20`
+                    : "bg-white/5 hover:bg-white/10 text-white/80 hover:shadow-md hover:shadow-purple/10"
+            )}
         >
           {t("art.categories.artwork")}
         </button>
@@ -75,7 +76,7 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
           </p>
           <Button 
             onClick={handleLoadImages}
-            className="w-full bg-gradient-to-r from-purple to-purple-light hover:opacity-90 transition-opacity"
+            className={`w-full bg-gradient-to-r ${isBirthday() ? 'from-pink-500 to-pink-200' : 'bg-purple hover:bg-purple-light'} hover:border-opacity-90  transition-opacity`}
           >
             {t("art.warning.loadButton")}
           </Button>

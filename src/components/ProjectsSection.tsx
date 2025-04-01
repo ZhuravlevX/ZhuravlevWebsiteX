@@ -5,6 +5,7 @@ import { Github } from "lucide-react";
 import { type Repository } from "@/utils/githubUtils";
 import { ProjectCard } from "./ProjectCard";
 import { GITHUB_USERNAME } from "@/utils/githubUtils";
+import {isBirthday} from "@/utils/dateUtils.ts";
 
 interface ProjectsSectionProps {
   repositories: Repository[];
@@ -56,7 +57,7 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
 
   return (
     <div ref={sectionRef} className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-light via-purple to-purple-light bg-clip-text text-transparent bg-[length:300%] animate-[gradientFlow_3s_ease_infinite]">
+      <h2 className={`text-3xl font-bold mb-6 bg-gradient-to-r ${isBirthday() ? 'from-pink-300 via-pink-400 to-pink-200' : 'from-purple-light via-purple to-purple-light'} bg-clip-text text-transparent bg-[length:300%] animate-[gradientFlow_3s_ease_infinite]`}>
         {t("projects.title")}
       </h2>
       
@@ -65,7 +66,7 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
           href={`https://github.com/${GITHUB_USERNAME}`} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple to-purple-light hover:from-purple-light hover:to-purple transition-all duration-500 rounded-md text-white mb-8 transform hover:scale-105 shadow-md shadow-purple/20 hover:shadow-lg hover:shadow-purple/30 group opacity-0 animate-[fadeInDown_0.6s_ease-out_0.3s_forwards]"
+          className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${isBirthday() ? 'from-pink-400 to-pink-200 hover:from-pink-300 hover:to-pink-400' : 'from-purple to-purple-light hover:from-purple-light hover:to-purple'} transition-all duration-500 rounded-md text-white mb-8 transform hover:scale-105 shadow-md ${isBirthday() ? 'shadow-purple/20 hover:shadow-lg hover:shadow-purple/30' :  'shadow-[#2c1a21]/20 hover:shadow-lg hover:shadow-[#2c1a21]/30'} group opacity-0 animate-[fadeInDown_0.6s_ease-out_0.3s_forwards]`}
         >
           <Github size={20} className="group-hover:rotate-12 transition-all duration-300" />
           {t("projects.githubProfile")}
@@ -73,14 +74,14 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
         
         <div className="space-y-12 w-full">
           <div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.5s_forwards]">
-            <h3 className="text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 before:bg-purple-light before:rounded-full">
+            <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>
               {t("projects.githubRepos")}
             </h3>
             {renderProjects(false)}
           </div>
           
           <div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.7s_forwards]">
-            <h3 className="text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 before:bg-purple-light before:rounded-full">
+            <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>
               {t("projects.games")}
             </h3>
             {renderProjects(true)}
