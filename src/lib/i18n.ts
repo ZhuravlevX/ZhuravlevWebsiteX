@@ -1,3 +1,4 @@
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -45,6 +46,9 @@ const resources = {
           message: "The following tab downloads images in high quality. This may result in high consumption of Internet traffic. It is recommended to enable the browser cache in the settings, for fast loading of images.",
           loadButton: "Confirm"
         },
+        newBadge: {
+          label: "New"
+        }
       },
       social: {
         title: "Contacts",
@@ -105,6 +109,9 @@ const resources = {
           message: "Следующая вкладка загружает изображения в высоком качестве. Это может привести к большому расходу интернет-трафика. Рекомендуется включить в настройках кэш-браузера, для быстрой загрузки изображений.",
           loadButton: "Подтвердить"
         },
+        newBadge: {
+          label: "Новое"
+        }
       },
       social: {
         title: "Контакты",

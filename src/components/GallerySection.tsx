@@ -1,11 +1,12 @@
+
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
-import { artImages, photoImages } from "@/data/galleryData";
+import { artImages, photoImages, type GalleryImage } from "@/data/galleryData";
 import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import {isBirthday} from "@/utils/dateUtils.ts";
+import { isBirthday } from "@/utils/dateUtils.ts";
 
 interface GallerySectionProps {
   onImageSelect: (image: string) => void;
@@ -38,7 +39,7 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
         {t("art.title")}
       </h2>
       
-      {/* Always show category buttons */}
+      {/* Category buttons always visible */}
       <div className="flex gap-4 mb-8 animate-fadeIn">
         <button
           onClick={() => setSelectedCategory("photos")}
@@ -76,7 +77,7 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
           </p>
           <Button 
             onClick={handleLoadImages}
-            className={`w-full bg-gradient-to-r ${isBirthday() ? 'from-pink-500 to-pink-200' : 'bg-purple hover:bg-purple-light'} hover:border-opacity-90  transition-opacity`}
+            className={`w-full bg-gradient-to-r ${isBirthday() ? 'from-pink-500 to-pink-200' : 'from-purple to-purple-light'} hover:border-opacity-90 transition-opacity`}
           >
             {t("art.warning.loadButton")}
           </Button>
@@ -89,7 +90,7 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
           {(selectedCategory === "artwork" ? artImages : photoImages).map((image, index) => (
             <div
               key={`${selectedCategory}-${index}`}
-              onClick={() => onImageSelect(image)}
+              onClick={() => onImageSelect(image.src)}
               className={cn(
                 "cursor-pointer mb-3 break-inside-avoid opacity-0",
                 "relative group overflow-hidden rounded-lg"
@@ -103,11 +104,21 @@ export const GallerySection = ({ onImageSelect }: GallerySectionProps) => {
               }}
             >
               <img
-                src={image}
+                src={image.src}
                 alt={`${selectedCategory === "artwork" ? "Art" : "Photo"} ${index + 1}`}
                 className="w-full object-cover rounded-lg transition-all duration-700 group-hover:scale-110 filter hover:brightness-110"
                 loading="lazy"
               />
+              
+              {image.isNew && (
+                <div className={`absolute top-2 right-2 px-2 py-1 text-xs font-bold text-white rounded-md 
+                  ${isBirthday() 
+                    ? 'bg-gradient-to-r from-pink-500 to-pink-200' 
+                    : 'bg-gradient-to-r from-purple to-purple-light'} 
+                  shadow-lg backdrop-blur-sm border border-white/20`}>
+                  {t("art.newBadge.label")}
+                </div>
+              )}
             </div>
           ))}
         </div>

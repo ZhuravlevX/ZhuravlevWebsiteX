@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -15,7 +16,7 @@ const getBackgroundClass = () => {
 };
 
 const changeFavicon = () => {
-    const favicon = document.querySelector('link[rel="icon"]');
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
     if (favicon) {
         favicon.href = isBirthday() ? '/public/favicon_hb.ico' : '/public/favicon.ico';
     }

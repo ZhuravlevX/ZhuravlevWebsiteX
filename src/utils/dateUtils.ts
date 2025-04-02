@@ -1,3 +1,4 @@
+
 import {format} from "date-fns";
 
 export const formatDate = (date: string) => {
@@ -27,4 +28,8 @@ export const isBirthday = () => {
 
 export const clearGalleryLoadedState = () => {
     localStorage.removeItem('galleryLoaded');
+};
+
+export const clearNewBadgesState = () => {
+    localStorage.removeItem('showNewBadges');
 };
