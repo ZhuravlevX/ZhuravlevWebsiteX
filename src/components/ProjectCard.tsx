@@ -58,7 +58,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
 
           {repo.language && (
               <div className="flex items-center gap-2">
-                <Circle size={8} className={`${isBirthday() ? 'text-pink-200' : 'text-purple-light'}`} />
+                <Circle size={8} className={`${isBirthday() ? 'text-pink-200' : 'text-purple-light'} animate-ping`} />
                 <span className="text-sm text-white/60">{repo.language}</span>
               </div>
           )}
@@ -76,7 +76,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
             }}
             className={`text-sm ${isBirthday() ? 'text-pink-400 hover:text-pink-200' : 'text-purple hover:text-purple-light'} transition-colors flex items-center gap-1 relative overflow-hidden group`}
           >
-            <Clock size={14} className="group-hover:animate-bounce" />
+            <Clock size={14} className="group-hover:animate-pulse" />
             <span className="relative">
               {t("projects.commits")}
               <span className={`absolute -bottom-1 left-0 w-0 h-px ${isBirthday() ? 'bg-pink-200' : 'bg-purple-light'} group-hover:w-full transition-all duration-300`}></span>
@@ -91,7 +91,7 @@ export const ProjectCard = ({ repo, index, onFetchCommits, isFurTopia = false }:
             rel="noopener noreferrer" 
             className={`text-sm ${isBirthday() ? 'text-pink-400 hover:text-pink-200' : 'text-purple hover:text-purple-light'} transition-colors flex items-center gap-1 relative overflow-hidden group`}
           >
-            <Link2 size={14} className="group-hover:rotate-12 transition-transform" />
+            <Link2 size={14} className="group-hover:rotate-12 group-hover:animate-pulse transition-transform" />
             <span className="relative">
               {t("projects.link")}
               <span className={`absolute -bottom-1 left-0 w-0 h-px ${isBirthday() ? 'bg-pink-200' : 'bg-purple-light'} group-hover:w-full transition-all duration-300`}></span>
