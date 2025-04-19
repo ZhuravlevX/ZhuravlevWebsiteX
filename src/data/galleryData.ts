@@ -26,7 +26,8 @@ export const artImages: GalleryImage[] = [
   { src: "/gallery/arts/art19.png", },
   { src: "/gallery/arts/art20.png" },
   { src: "/gallery/arts/art21.png" },
-  { src: "/gallery/arts/art22.png" }
+  { src: "/gallery/arts/art22.png" },
+  { src: "/gallery/arts/art23.png", isNew: true }
 ];
 
 export const photoImages: GalleryImage[] = [
@@ -42,19 +43,19 @@ export const photoImages: GalleryImage[] = [
   { src: "/gallery/pictures/picture10.png" },
   { src: "/gallery/pictures/picture11.png" },
   { src: "/gallery/pictures/picture12.png" },
-  { src: "/gallery/pictures/picture13.png", isNew: true },
-  { src: "/gallery/pictures/picture14.png", isNew: true },
-  { src: "/gallery/pictures/picture15.png", isNew: true },
-  { src: "/gallery/pictures/picture16.png", isNew: true},
-  { src: "/gallery/pictures/picture17.png", isNew: true},
-  { src: "/gallery/pictures/picture18.png", isNew: true },
-  { src: "/gallery/pictures/picture19.png", isNew: true},
-  { src: "/gallery/pictures/picture20.png", isNew: true },
-  { src: "/gallery/pictures/picture21.png", isNew: true },
-  { src: "/gallery/pictures/picture22.png", isNew: true },
-  { src: "/gallery/pictures/picture23.png", isNew: true },
-  { src: "/gallery/pictures/picture24.png", isNew: true},
-  { src: "/gallery/pictures/picture25.png", isNew: true },
-  { src: "/gallery/pictures/picture26.png", isNew: true },
-  { src: "/gallery/pictures/picture27.png", isNew: true }
+  { src: "/gallery/pictures/picture13.png", },
+  { src: "/gallery/pictures/picture14.png", },
+  { src: "/gallery/pictures/picture15.png", },
+  { src: "/gallery/pictures/picture16.png", },
+  { src: "/gallery/pictures/picture17.png", },
+  { src: "/gallery/pictures/picture18.png", },
+  { src: "/gallery/pictures/picture19.png" },
+  { src: "/gallery/pictures/picture20.png" },
+  { src: "/gallery/pictures/picture21.png" },
+  { src: "/gallery/pictures/picture22.png" },
+  { src: "/gallery/pictures/picture23.png" },
+  { src: "/gallery/pictures/picture24.png" },
+  { src: "/gallery/pictures/picture25.png" },
+  { src: "/gallery/pictures/picture26.png" },
+  { src: "/gallery/pictures/picture27.png" }
 ];
