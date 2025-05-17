@@ -27,7 +27,9 @@ export const artImages: GalleryImage[] = [
   { src: "/gallery/arts/art20.png" },
   { src: "/gallery/arts/art21.png" },
   { src: "/gallery/arts/art22.png" },
-  { src: "/gallery/arts/art23.png", isNew: true }
+  { src: "/gallery/arts/art23.png"},
+  { src: "/gallery/arts/art24.png", isNew: true },
+  { src: "/gallery/arts/art25.png", isNew: true }
 ];
 
 export const photoImages: GalleryImage[] = [
@@ -57,5 +59,16 @@ export const photoImages: GalleryImage[] = [
   { src: "/gallery/pictures/picture24.png" },
   { src: "/gallery/pictures/picture25.png" },
   { src: "/gallery/pictures/picture26.png" },
-  { src: "/gallery/pictures/picture27.png" }
+  { src: "/gallery/pictures/picture27.png" },
+  { src: "/gallery/pictures/picture28.png", isNew: true },
+  // { src: "/gallery/pictures/picture29.png", isNew: true }, Fail Image
+  { src: "/gallery/pictures/picture30.png", isNew: true },
+  { src: "/gallery/pictures/picture31.png", isNew: true },
+  { src: "/gallery/pictures/picture32.png", isNew: true },
+  { src: "/gallery/pictures/picture33.png", isNew: true },
+  { src: "/gallery/pictures/picture34.png", isNew: true },
+  { src: "/gallery/pictures/picture35.png", isNew: true },
+  { src: "/gallery/pictures/picture36.png", isNew: true },
+  { src: "/gallery/pictures/picture37.png", isNew: true },
+  { src: "/gallery/pictures/picture38.png", isNew: true }
 ];
