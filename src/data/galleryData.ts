@@ -61,15 +61,15 @@ export const photoImages: GalleryImage[] = [
   { src: "/gallery/pictures/picture25.png" },
   { src: "/gallery/pictures/picture26.png" },
   { src: "/gallery/pictures/picture27.png" },
-  { src: "/gallery/pictures/picture28.png", isNew: true },
+  { src: "/gallery/pictures/picture28.png" },
   // { src: "/gallery/pictures/picture29.png", isNew: true }, Fail Image
-  { src: "/gallery/pictures/picture30.png", isNew: true },
-  { src: "/gallery/pictures/picture31.png", isNew: true },
-  { src: "/gallery/pictures/picture32.png", isNew: true },
-  { src: "/gallery/pictures/picture33.png", isNew: true },
-  { src: "/gallery/pictures/picture34.png", isNew: true },
-  { src: "/gallery/pictures/picture35.png", isNew: true },
-  { src: "/gallery/pictures/picture36.png", isNew: true },
-  { src: "/gallery/pictures/picture37.png", isNew: true },
-  { src: "/gallery/pictures/picture38.png", isNew: true }
+  { src: "/gallery/pictures/picture30.png" },
+  { src: "/gallery/pictures/picture31.png" },
+  { src: "/gallery/pictures/picture32.png" },
+  { src: "/gallery/pictures/picture33.png" },
+  { src: "/gallery/pictures/picture34.png" },
+  { src: "/gallery/pictures/picture35.png" },
+  { src: "/gallery/pictures/picture36.png" },
+  { src: "/gallery/pictures/picture37.png" },
+  { src: "/gallery/pictures/picture38.png" }
 ];
