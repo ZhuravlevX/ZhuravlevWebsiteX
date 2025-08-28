@@ -80,12 +80,12 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
             {renderProjects(false)}
           </div>
           
-          <div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.7s_forwards]">
-            <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>
-              {t("projects.games")}
-            </h3>
-            {renderProjects(true)}
-          </div>
+          {/*<div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.7s_forwards]">*/}
+          {/*  <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>*/}
+          {/*    {t("projects.games")}*/}
+          {/*  </h3>*/}
+          {/*  {renderProjects(true)}*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>

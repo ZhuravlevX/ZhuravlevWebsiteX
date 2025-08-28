@@ -27,11 +27,11 @@ export const artImages: GalleryImage[] = [
   { src: "/gallery/arts/art20.png" },
   { src: "/gallery/arts/art21.png" },
   { src: "/gallery/arts/art22.png" },
-  { src: "/gallery/arts/art23.png"},
-  { src: "/gallery/arts/art24.png"},
-  { src: "/gallery/arts/art25.png"},
-  { src: "/gallery/arts/art26.png", isNew: true },
-  { src: "/gallery/arts/art27.png", isNew: true }
+  { src: "/gallery/arts/art23.png" },
+  { src: "/gallery/arts/art24.png" },
+  { src: "/gallery/arts/art25.png" },
+  { src: "/gallery/arts/art26.png" },
+  { src: "/gallery/arts/art27.png" }
 ];
 
 export const photoImages: GalleryImage[] = [
