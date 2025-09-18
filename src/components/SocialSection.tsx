@@ -146,6 +146,25 @@ export const SocialSection = () => {
           <span className="relative z-10">Twitch</span>
         </a>
 
+        {/*<a*/}
+        {/*    href="https://www.twitch.tv/zhuravievx"*/}
+        {/*    target="_blank"*/}
+        {/*    rel="noopener noreferrer"*/}
+        {/*    className={cn(*/}
+        {/*        "w-full flex items-center justify-center gap-2 px-5 py-3 rounded-md text-white",*/}
+        {/*        "bg-[#8a46eb] hover:bg-[#9246ff] transition-all duration-500",*/}
+        {/*        "transform hover:scale-105 hover:shadow-lg hover:shadow-[#8a46eb]/20",*/}
+        {/*        "relative overflow-hidden group opacity-0",*/}
+        {/*        "animate-[fadeInDown_0.7s_ease-out_1.2s_forwards]",*/}
+        {/*        "before:content-[''] before:absolute before:inset-0 before:opacity-0 before:bg-white/10",*/}
+        {/*        "before:transform before:scale-x-0 before:origin-right",*/}
+        {/*        "hover:before:scale-x-100 hover:before:origin-left before:transition-all before:duration-500"*/}
+        {/*    )}*/}
+        {/*>*/}
+        {/*  <svg fill="#ffffff" width="22px" height="22px" viewBox="0 0 512 512" className="shrink-0 group-hover:animate-pulse" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>ionicons-v5_logos</title><path d="M80,32,48,112V416h96v64h64l64-64h80L464,304V32ZM416,288l-64,64H256l-64,64V352H112V80H416Z"></path><rect x="320" y="143" width="48" height="129"></rect><rect x="208" y="143" width="48" height="129"></rect></g></svg>*/}
+        {/*  <span className="relative z-10">Twitch</span>*/}
+        {/*</a>*/}
+
         {i18n.language === "ru" && (
             <a
                 href="https://vk.com/foxdanny"

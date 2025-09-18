@@ -31,9 +31,9 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
     
     const gameProjects = isGame ? [...filteredRepos, {
       id: 999999,
-      name: "FurTopia",
-      description: "A furry-themed adventure game with unique characters and engaging storyline",
-      html_url: "https://store.steampowered.com/app/2370840/FurTopia/",
+      name: "Cassette",
+      description: "Cassette – An atmospheric analog psychological horror game in the spirit of old VHS tapes, where you will have to face the unknown and the secrets hidden in the tapes you find.",
+      html_url: "https://store.steampowered.com/app/2723320/Cassette/",
       language: "C#",
       topics: ["game"],
       homepage: null,
@@ -48,7 +48,7 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
             repo={repo}
             index={index}
             onFetchCommits={onFetchCommits}
-            isFurTopia={repo.name === "FurTopia"}
+            isCassette={repo.name === "Cassette"}
           />
         ))}
       </div>
@@ -79,13 +79,13 @@ export const ProjectsSection = ({ repositories, onFetchCommits }: ProjectsSectio
             </h3>
             {renderProjects(false)}
           </div>
-          
-          {/*<div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.7s_forwards]">*/}
-          {/*  <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>*/}
-          {/*    {t("projects.games")}*/}
-          {/*  </h3>*/}
-          {/*  {renderProjects(true)}*/}
-          {/*</div>*/}
+
+          <div className="opacity-0 animate-[fadeInUp_0.7s_ease-out_0.7s_forwards]">
+            <h3 className={`text-xl font-semibold mb-5 text-white/90 flex items-center gap-2 before:content-[''] before:w-1 before:h-6 ${isBirthday() ? 'before:bg-pink-300' : 'before:bg-purple-light' } before:rounded-full`}>
+              {t("projects.games")}
+            </h3>
+            {renderProjects(true)}
+          </div>
         </div>
       </div>
     </div>
